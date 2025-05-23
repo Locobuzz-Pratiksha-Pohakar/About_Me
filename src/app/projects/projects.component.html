@@ -1,0 +1,11 @@
+<h2>My Projects</h2>
+
+<button (click)="showProjects = !showProjects">
+  {{ showProjects ? 'Hide' : 'Show' }} Projects
+</button>
+
+<ul *ngIf="showProjects">
+  <li *ngFor="let project of projects">
+    <strong>{{ project.title }}</strong>: {{ project.description }}
+  </li>
+</ul>
