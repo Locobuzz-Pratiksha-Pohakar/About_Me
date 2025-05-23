@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-
+  skills = [
+    'Angular',
+    'TypeScript',
+    'JavaScript',
+    'HTML & CSS',
+    '.Net core',
+    'MVC'
+  ];
 }
-
-
-const skills = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Node.js'];

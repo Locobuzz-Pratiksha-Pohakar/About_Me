@@ -1,18 +1,26 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
   projects = [
-    { title: 'Portfolio Website', description: 'Built with Angular and hosted on Firebase' },
-    { title: 'Task Manager', description: 'A full-stack app with MEAN stack' }
+    {
+      name: 'Portfolio Website',
+      description: 'A personal portfolio website built with Angular and  CSS.'
+    },
+    {
+      name: 'Task Manager App',
+      description: 'An app to manage daily tasks with CRUD operations and user authentication.'
+    },
+    {
+      name: 'Weather Dashboard',
+      description: 'A dashboard displaying weather information fetched from a public API.'
+    }
   ];
-  
-  showProjects = true;
-  
 }
-

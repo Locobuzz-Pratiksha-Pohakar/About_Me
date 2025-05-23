@@ -5,4 +5,13 @@
       I am a API developer, who wants to learn angular  with a strong interest in frontend architecture and design.
     </p>
   </div>
+  <div class="input-section">
+    <input
+      type="text"
+      [(ngModel)]="userName"
+      placeholder="Enter your name"
+    />
+  
+    <p *ngIf="userName">Hello, {{ userName }}! 👋</p>
+  </div>
   
